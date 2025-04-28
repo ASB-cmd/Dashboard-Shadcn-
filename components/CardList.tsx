@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Card, CardContent, CardFooter, CardTitle } from "./ui/card";
-import { Badge } from "lucide-react";
+import { Badge } from "./ui/badge";
 
 const popularContent = [
   {
@@ -92,7 +92,7 @@ const CardList = ({ title }: { title: string }) => {
   const list =
     title === "Popular Content" ? popularContent : latestTransactions;
   return (
-    <div>
+    <div className="">
       <h1 className="text-lg font-medium mb-6">{title}</h1>
       <div className="flex flex-col gap-2">
         {list.map((item) => (
