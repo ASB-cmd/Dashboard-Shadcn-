@@ -1,5 +1,6 @@
 "use client";
-import { CalendarHeartIcon, CalendarIcon, CheckCheck } from "lucide-react";
+
+import { CalendarIcon } from "lucide-react";
 import { Card } from "./ui/card";
 import { ScrollArea } from "./ui/scroll-area";
 import { Checkbox } from "./ui/checkbox";
@@ -27,8 +28,10 @@ const TodoList = () => {
             mode="single"
             selected={date}
             onSelect={(date) => {
-              setDate(date);
-              setOpen(false);
+              if (date) {
+                setDate(date);
+                setOpen(false);
+              }
             }}
             className="rounded-md border"
           />
